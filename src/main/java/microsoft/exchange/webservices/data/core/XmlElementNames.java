@@ -809,6 +809,11 @@ public class XmlElementNames {
   public static final String IsOnlineMeeting = "IsOnlineMeeting";
 
   /**
+   * The Constant JoinOnlineMeetingUrl.
+   */
+  public static final String JoinOnlineMeetingUrl = "JoinOnlineMeetingUrl";
+
+  /**
    * The Constant MeetingWorkspaceUrl.
    */
   public static final String MeetingWorkspaceUrl = "MeetingWorkspaceUrl";

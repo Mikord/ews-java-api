@@ -1189,6 +1189,17 @@ public class Appointment extends Item implements ICalendarActionProvider {
   }
 
   /**
+   * Gets  a value url online meeting.
+   *
+   * @return the url of online meeting
+   * @throws ServiceLocalException the service local exception
+   */
+  public String getJoinOnlineMeetingUrl() throws ServiceLocalException {
+    return getPropertyBag().getObjectFromPropertyDefinition(
+        AppointmentSchema.JoinOnlineMeetingUrl);
+  }
+
+  /**
    * Sets the checks if is online meeting.
    *
    * @param value the new checks if is online meeting

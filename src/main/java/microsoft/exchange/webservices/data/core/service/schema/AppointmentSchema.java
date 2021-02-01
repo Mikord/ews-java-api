@@ -261,6 +261,11 @@ public class AppointmentSchema extends ItemSchema {
     String IsOnlineMeeting = "calendar:IsOnlineMeeting";
 
     /**
+     * The Is online meeting url.
+     */
+    String JoinOnlineMeetingUrl = "calendar:JoinOnlineMeetingUrl";
+
+    /**
      * The Meeting workspace url.
      */
     String MeetingWorkspaceUrl = "calendar:MeetingWorkspaceUrl";
@@ -784,6 +789,18 @@ public class AppointmentSchema extends ItemSchema {
               PropertyDefinitionFlags.CanFind),
           ExchangeVersion.Exchange2007_SP1);
 
+  // Defines the JoinOnlineMeetingUrl property.
+  /**
+   * The Constant JoinOnlineMeetingUrl.
+   */
+  public static final PropertyDefinition JoinOnlineMeetingUrl =
+      new StringPropertyDefinition(
+          XmlElementNames.JoinOnlineMeetingUrl, FieldUris.JoinOnlineMeetingUrl, EnumSet
+          .of(PropertyDefinitionFlags.CanSet,
+              PropertyDefinitionFlags.CanUpdate,
+              PropertyDefinitionFlags.CanFind),
+          ExchangeVersion.Exchange2013);
+
   // Defines the MeetingWorkspaceUrl property.
   /**
    * The Constant MeetingWorkspaceUrl.
@@ -896,6 +913,7 @@ public class AppointmentSchema extends ItemSchema {
     this.registerProperty(ConferenceType);
     this.registerProperty(AllowNewTimeProposal);
     this.registerProperty(IsOnlineMeeting);
+    this.registerProperty(JoinOnlineMeetingUrl);
     this.registerProperty(MeetingWorkspaceUrl);
     this.registerProperty(NetShowUrl);
     this.registerProperty(ICalUid);
