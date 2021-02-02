@@ -123,6 +123,43 @@
             </properties>
         </profile>
         <profile>
+            <id>artifactory</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <property>
+                    <name>!skipDefault</name>
+                </property>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://repo.micord.ru/repository/maven-public</url>
+                </repository>
+                <repository>
+                    <id>mikord</id>
+                    <name>mikord</name>
+                    <url>https://repo.micord.ru/repository/maven-mikord</url>
+                </repository>
+                <repository>
+                    <id>atlassian-public</id>
+                    <url>https://packages.atlassian.com/maven/repository/public</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://repo.micord.ru/repository/maven-public</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>mikord</id>
+                    <name>mikord</name>
+                    <url>https://repo.micord.ru/repository/maven-mikord</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+        <profile>
             <!-- maven-checkstyle-plugin required Java 7 or later -->
             <id>java-7-or-later-profile</id>
             <activation>
